@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 const webdriver = require('selenium-webdriver')
 
-app.get('/', async function (req, res) {
+app.get('/basla', async function (req, res) {
 
   let buff = new Buffer(req.params.data, 'base64')
   let text = buff.toString('ascii')
