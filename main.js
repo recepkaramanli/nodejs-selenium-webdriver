@@ -2,7 +2,7 @@ const webdriver = require('selenium-webdriver');
 
 async function sayfaac(url) {
 
-  let driver =  await new webdriver.Builder().forBrowser('firefox').build();
+  let driver =  await new webdriver.Builder().forBrowser('chrome').build();
   await driver.get('https://www.sahibinden.com/')
   driver.getPageSource()
   .then(function(src) {
