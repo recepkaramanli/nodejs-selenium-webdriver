@@ -1,16 +1,11 @@
 {
-  "name": "nodejs-selenium",
+  "name": "desktop",
   "version": "1.0.0",
   "description": "",
   "main": "sunucu.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "start": "node sunucu.js"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "selenium-webdriver": "^4.0.0-alpha.7"
-  }
+  "license": "ISC"
 }
