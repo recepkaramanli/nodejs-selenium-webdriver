@@ -18,5 +18,5 @@ app.get('/basla', async function (req, res) {
 })
 
 var server = app.listen(7777, function () {
-  console.log('sunucu calisiyor-2');
+  console.log('sunucu calisiyor');
 })
