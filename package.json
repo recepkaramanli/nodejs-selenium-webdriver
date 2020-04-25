@@ -4,7 +4,7 @@
   "description": "",
   "main": "sunucu.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "sudo node main.js"
   },
   "author": "",
   "license": "ISC",
