@@ -1,5 +1,5 @@
 {
-  "name": "desktop",
+  "name": "nodejsapp",
   "version": "1.0.0",
   "description": "",
   "main": "sunucu.js",
@@ -7,5 +7,9 @@
     "start": "node sunucu.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  }
 }
