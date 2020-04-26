@@ -12,7 +12,7 @@ async function sayfaac(url) {
   let serviceBuilder = new chrome.ServiceBuilder(process.env.CHROME_DRIVER_PATH);
 
   options.addArguments("--headless");
-  options.addArguments("--disable-gpu");
+  //options.addArguments("--disable-gpu");
   options.addArguments("--no-sandbox");
 
   let driver =  await new webdriver.Builder().
@@ -28,4 +28,4 @@ async function sayfaac(url) {
   driver.quit()
 }
 
-await sayfaac()
+sayfaac()
