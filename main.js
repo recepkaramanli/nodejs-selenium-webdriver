@@ -1,4 +1,6 @@
 const webdriver = require('selenium-webdriver')
+const express = require('express');
+const app = express();
 const path = require('path')
 
 // Serve static files from the React app. 
