@@ -1,6 +1,5 @@
 const webdriver = require('selenium-webdriver')
 chrome = require('selenium-webdriver/chrome')
-var bekle = require('sleep');
 
 options = new chrome.Options();
 options.addArguments('headless');
