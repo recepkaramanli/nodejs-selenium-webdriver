@@ -14,7 +14,6 @@ async function sayfaac() {
     //await driver.get('https://www.sahibinden.com/ilan/ikinci-el-ve-sifir-alisveris-bilgisayar-dizustu-no$
     //await driver.get('https://www.recepkaramanli.com/fiyat-takip/islemtest.php');
     await driver.get('https://www.recepkaramanli.com/fiyat-takip');
-    bekle.sleep(7);
     await driver.getTitle().then(function(title) { console.log(title); })
     //await driver.getPageSource().then(function (src) { console.log(src); });
 }
