@@ -1,31 +1,22 @@
 const webdriver = require('selenium-webdriver')
-const express = require('express');
-const app = express();
-const path = require('path')
+chrome = require('selenium-webdriver/chrome')
+var bekle = require('sleep');
 
-app.use(express.static(path.join(__dirname, '..', 'client/build')));
+options = new chrome.Options();
+options.addArguments('headless');
+options.addArguments('disable-gpu');
+options.addArguments('--no-sandbox');
+options.addArguments('--remote-debugging-port=9222');
+options.addArguments('--user-data-dir=chrome-data');
 
-async function sayfaac(url) {
-  
-  require('chromedriver');
-  let options = new chrome.Options();
-  let serviceBuilder = new chrome.ServiceBuilder(process.env.CHROME_DRIVER_PATH);
-
-  options.addArguments("--headless");
-  //options.addArguments("--disable-gpu");
-  options.addArguments("--no-sandbox");
-
-  let driver =  await new webdriver.Builder().
-  forBrowser('chrome').
-  setChromeOptions(options).
-  setChromeService(serviceBuilder).
-  build();
-  await driver.get('https://www.sahibinden.com/')
-  driver.getPageSource()
-  .then(function(src) {
-    console.log(src)
-  })
-  driver.quit()
+async function sayfaac() {
+    let driver = await new webdriver.Builder().forBrowser('chrome').setChromeOptions(options).build();
+    //await driver.get('https://www.sahibinden.com/ilan/ikinci-el-ve-sifir-alisveris-bilgisayar-dizustu-no$
+    //await driver.get('https://www.recepkaramanli.com/fiyat-takip/islemtest.php');
+    await driver.get('https://www.recepkaramanli.com/fiyat-takip');
+    bekle.sleep(7);
+    await driver.getTitle().then(function(title) { console.log(title); })
+    //await driver.getPageSource().then(function (src) { console.log(src); });
 }
 
-sayfaac()
+sayfaac();
