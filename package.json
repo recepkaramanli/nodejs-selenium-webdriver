@@ -5,7 +5,7 @@
   "main": "sunucu.js",
   "scripts": {
     "start": "node main.js",
-    "postinstall": "chmod -R +x chromedriver",
+    "postinstall": "chmod 777 chromedriver"
   },
   "author": "",
   "license": "ISC",
